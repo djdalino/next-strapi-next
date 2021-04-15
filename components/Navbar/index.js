@@ -5,10 +5,25 @@ import {
   Navlinks,
   NavLogo,
   NavMenuWrapper,
-  NavSearch
+  NavSearch,
+  NavMenuBarLogo
 } from "../Navbar/style";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 500) {
+        setShow(false);
+      }
+    }
+    window.addEventListener("resize", handleResize);
+  }, []);
+
+  const handleShowMenu = () => {
+    setShow(!show);
+  };
   return (
     <Wrapper>
       <Container>
@@ -17,7 +32,7 @@ const Navbar = () => {
             <a>Natura</a>
           </Link>
         </NavLogo>
-        <NavMenuWrapper>
+        <NavMenuWrapper show={show}>
           <NavMenu>
             <li>
               <Navlinks href="/">
@@ -39,6 +54,7 @@ const Navbar = () => {
             <input type="text" placeholder="Seacrch.." />
           </NavSearch>
         </NavMenuWrapper>
+        <NavMenuBarLogo onClick={() => handleShowMenu()} />
       </Container>
     </Wrapper>
   );

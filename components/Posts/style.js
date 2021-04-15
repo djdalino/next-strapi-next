@@ -23,8 +23,13 @@ export const Container = styled.div`
   }
   h2 {
     text-align: center;
-
     font-weight: 400;
+  }
+
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 36px;
+    }
   }
 `;
 
@@ -36,11 +41,21 @@ export const PostImg = styled.img`
 export const PostWrapper = styled.div`
   display: flex;
   padding: 0 60px;
+  @media screen and (max-width: 500px) {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 export const PostExcerpt = styled.div`
   padding: 0 20px;
   font-size: 20px;
   line-height: 26px;
+  @media screen and (max-width: 500px) {
+    margin-top: 20px;
+    font-size: 16px;
+  }
 `;
 
 export const PostLinkWrapper = styled.div`

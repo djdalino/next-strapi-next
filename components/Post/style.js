@@ -29,7 +29,8 @@ export const Container = styled.div`
 `;
 
 export const PostImg = styled.img`
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: auto;
   text-align: center;
   margin: auto;
@@ -43,4 +44,8 @@ export const PostContent = styled.div`
   padding: 20px 20px 0 20px;
   font-size: 20px;
   line-height: 26px;
+  @media screen and (max-width: 500px) {
+    padding: 20px 0 0 0;
+    font-size: 16px;
+  }
 `;

@@ -23,9 +23,6 @@ export default function Posts({ posts }) {
     <Wrapper>
       <Container>
         {posts.map(post => {
-          const photo = `https://next-strapi-test.herokuapp.com${post.featured.formats.small.url}`;
-          console.log(photo.length);
-
           return (
             <section key={post.id}>
               <h1>{post.title}</h1>
@@ -51,6 +48,7 @@ export default function Posts({ posts }) {
                 <InstagramIcon />
                 <LinkedInIcon />
               </SocialMediaWrapper>
+              <hr />
             </section>
           );
         })}

@@ -4,7 +4,7 @@ export const Wrapper = styled.section`
   width: 100%;
   margin: 0;
   padding: 20px 20px;
-  color: #ffffff;
+  color: #2c3e50;
 `;
 export const Container = styled.div`
   max-width: 1068px;

@@ -1,15 +1,18 @@
+import SinglePost from "../../components/Post";
+
 export default function Post({ post }) {
   if (!post) return <p>Loading...</p>;
   // const Image = `http://localhost:1337/`
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <img
-        src={`https://next-strapi-test.herokuapp.com${post.featured.formats.large.url}`}
-      />
+    <SinglePost post={post} />
+    // <div>
+    //   <h1>{post.title}</h1>
+    //   <img
+    //     src={`https://next-strapi-test.herokuapp.com${post.featured.formats.large.url}`}
+    //   />
 
-      <div dangerouslySetInnerHTML={{ __html: post.content }} />
-    </div>
+    //   <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    // </div>
   );
 }
 

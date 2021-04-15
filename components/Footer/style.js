@@ -8,7 +8,7 @@ export const Wrapper = styled.footer`
 export const Container = styled.div`
   max-width: 1068px;
   margin: auto;
-  color: #ffffff;
+  color: #2c3e50;
   p {
     text-align: center;
     font-size: 18px;

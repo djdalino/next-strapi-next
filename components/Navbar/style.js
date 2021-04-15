@@ -54,7 +54,7 @@ export const NavLogo = styled.div`
   display: flex;
   align-items: center;
   a {
-    font-size: 26px;
+    font-size: 36px;
     font-weight: 800;
   }
 `;

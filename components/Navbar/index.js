@@ -34,17 +34,17 @@ const Navbar = () => {
         </NavLogo>
         <NavMenuWrapper show={show}>
           <NavMenu>
-            <li>
+            <li onClick={() => handleShowMenu()}>
               <Navlinks href="/">
                 <a>Home</a>
               </Navlinks>
             </li>
-            <li>
+            <li onClick={() => handleShowMenu()}>
               <Navlinks href="/about">
                 <a>About</a>
               </Navlinks>
             </li>
-            <li>
+            <li onClick={() => handleShowMenu()}>
               <Navlinks href="/contact">
                 <a>Contact</a>
               </Navlinks>

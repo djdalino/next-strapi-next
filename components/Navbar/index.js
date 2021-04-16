@@ -10,8 +10,10 @@ import {
 } from "../Navbar/style";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+
 const Navbar = () => {
   const [show, setShow] = useState(false);
+
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth > 500) {
@@ -24,6 +26,7 @@ const Navbar = () => {
   const handleShowMenu = () => {
     setShow(!show);
   };
+
   return (
     <Wrapper>
       <Container>

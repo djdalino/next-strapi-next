@@ -12,6 +12,7 @@ import {
   InstagramIcon,
   LinkedInIcon
 } from "./style";
+import SEO from "../SEO";
 export default function Posts({ posts }) {
   const addDefaultPhoto = e => {
     e.target.src =
@@ -21,6 +22,7 @@ export default function Posts({ posts }) {
   if (!posts) return <p>Loading...</p>;
   return (
     <Wrapper>
+      <SEO description="This is sample Post" siteTitle="Natura" />
       <Container>
         {posts.map(post => {
           return (

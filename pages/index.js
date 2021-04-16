@@ -2,14 +2,15 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import Post from "../components/Posts";
 //import styles from '../styles/Home.module.css'
-
+import SEO from "../components/SEO";
 export default function Home({ data }) {
   return (
     <div>
-      <Head>
+      <SEO />
+      {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
       <main>
         <Hero />

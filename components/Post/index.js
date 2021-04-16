@@ -1,17 +1,5 @@
-import Link from "next/link";
-import {
-  Wrapper,
-  Container,
-  PostImg,
-  PostWrapper,
-  PostContent,
-  PostLinkWrapper,
-  SocialMediaWrapper,
-  FbIcon,
-  TwitterIcon,
-  InstagramIcon,
-  LinkedInIcon
-} from "./style";
+import { Wrapper, Container, PostImg, PostContent } from "./style";
+import SEO from "../SEO";
 export default function Post({ post }) {
   const addDefaultPhoto = e => {
     e.target.src =
@@ -20,6 +8,7 @@ export default function Post({ post }) {
   if (!post) return <p>Loading...</p>;
   return (
     <Wrapper>
+      <SEO title={post.title} description={post.content} siteTitle="Natura" />
       <Container>
         <h1>{post.title}</h1>
         <PostImg
